@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <script src="https://e-commerce.raiffeisen.ru/pay/sdk/v2/payment.styled.min.js"></script>
+    <link rel="stylesheet" href="https://e-commerce.raiffeisen.ru/pay/sdk/v2/payment.min.css">
+    
+</head>
+
+<body>
+<div class="layout">
+<script>
+    const payment = new PaymentPageSdk('000001780049001-80049001', {
+    url: 'https://test.ecom.raiffeisen.ru/pay/'
+});
+
+payment.openPopup({
+    amount: 10.00,
+    comment: 'Благотворительное пожертвование',
+    locale: 'ru',
+    paymentMethod: 'ONLY_SBP',
+    style: {
+        button: {
+            borderRadius: '7px',
+        },
+    }
+});
+</script>
+</div>
+
+</body>
+
+</html>
